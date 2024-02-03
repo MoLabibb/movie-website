@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Getflex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link  type="text/css" href="css/all.min.css">
+  <link  type="text/css" href="css/bootstrap.min">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+<nav class="container">
+  <div class="logo"><span>Get</span><span>flex</span></div>
+  <div class="menu"><i class="fa-solid fa-bars"></i></div>
+  <ul class="nav-links">
+    <li class="nav-link"><a href="#popular-now">Popular Now</a></li>
+    <li class="nav-link"><a href="#latest">Latest</a></li>
+    <li class="nav-link"><a href="#top-rated">Top IMDB</a></li>
+  </ul>
+    <form method="get" class="search-form" role="search" id="search_form">
+      <input  name="search" type="search" class="form-control" id="search" placeholder="search movies">
+      <button type="submit"><div class="nav-link search"><i class="fa-solid fa-search"></i></div></button>
+      <div class="close"><i class="fa-solid fa-xmark"></i></div>
+    </form>
+    
+</nav>
+
+<div class="movie-objective" id = 'objective' onclick="toggleSummary()">
+  
+</div>
+
+<div class="landing container">
+
+  <div class="movie-container">
+  
+  </div>
+
+  <div class="main-banner">
+    
+    <div class="content" id="content">
+      <div class="movie-section active">
+        <h3 class="title">Spider Man No Way Home</h3>
+        <div class="movie-details">
+          <span>IMDB</span><span>8.2 (12827)</span><span>1 hour 55 minutes</span><span>SCI-FI</span>
+        </div>
+        <div class="summary">
+          With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.              </div>
+        <div class="btns">
+          <div class="trailer-btn" onclick="toggleVideo()">
+            <i class="fa-solid fa-circle-play"></i>
+            <div class="play" >Watch Trailer</div>
+          </div>
+          <div class="watch-btn">
+            <i class="fa-solid fa-circle-play"></i>
+            <div class="play">Watch Now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      
+        <div class="swiper-container">
+
+          <div class="swiper-wrapper" id="main-slider">
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="trailer">
+    <video src="./images/trailer.mp4"
+      muted
+      controls = "true"
+      autoplay = "true"
+    ></video>
+    <i class="fa-solid fa-close" onclick="toggleVideo()" ></i>
+  </div>
+
+</div>
+
+<div class="popular container" id="popular-now">
+  <div class="main-title"><span>Popular</span><span>Now</span></div>
+
+  <div class="slide-container swiper">
+    <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper" id="popular">
+            
+
+          
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="tops container" id="top-rated">
+  <div class="main-title"><span>Top</span><span>Rated</span></div>
+
+  <div class="slide-container swiper">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper" id="tops">
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trailers container" id="latest">
+  <div class="main-title"><span>Latest</span><span>Trailers</span></div>
+  <div class="trailers-container" id="trailers">
+
+  </div>
+
+</div>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Categoreis</h3>
+        <div class="footer-item">Movies</div>
+        <div class="footer-item">TV series</div>
+        <div class="footer-item">FAQ's</div>
+        <div class="footer-item">DMCA</div>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <div class="footer-item">Help Center</div>
+        <div class="footer-item">Jobs</div>
+        <div class="footer-item">Terms Of Use</div>
+        <div class="footer-item">contact us </div>
+      </div>
+      <div class="footer-section">
+        <h3>Countries</h3>
+        <div class="footer-item">Spain</div>
+        <div class="footer-item">South Africa</div>
+        <div class="footer-item">Ireland</div>
+        <div class="footer-item">Yemen</div>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <form>
+          <input type="text" placeholder="Enter Your Email"><button type="submit">Follow</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Movie Website. All rights reserved. | Designed by <strong>Mohamed Labib</strong></p>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
+  <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+  <script  src="./script.js"></script>
+ <!-- External Js File -->
+
+
+</body>
+</html>
