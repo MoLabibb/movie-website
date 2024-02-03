@@ -1,6 +1,22 @@
 const menu = document.querySelector('.menu')
 const links  = document.querySelector('.nav-links')
 const movie_objective = document.getElementById('objective'); 
+
+window.onload =  function() {
+  const trailer_btns = document.querySelectorAll('.box .start')
+  const movie_card  = document.querySelectorAll('.movie-card')
+  trailer_btns.forEach((btn)=>{
+    btn.addEventListener('click', toggleVideo)
+  })
+
+  movie_card.forEach((card)=>{
+    card.addEventListener('click', (e)=>{
+      e.preventDefault()
+      objective(+card.id)
+    })
+  })
+};
+
 function objective(id) {
   movie_objective.classList.add('active')
   const url  = `${base_url}/movie/${id}` ; 
@@ -39,21 +55,6 @@ movie_objective.innerHTML =
 
  
 }
-window.onload =  function() {
-  const trailer_btns = document.querySelectorAll('.box .start')
-  const movie_card  = document.querySelectorAll('.movie-card')
-  trailer_btns.forEach((btn)=>{
-    btn.addEventListener('click', toggleVideo)
-  })
-
-  movie_card.forEach((card)=>{
-    card.addEventListener('click', (e)=>{
-      e.preventDefault()
-      objective(+card.id)
-    })
-  })
-};
-
 const toggleClass = ()=>{
   links.classList.toggle('show-links');
 }
